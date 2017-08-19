@@ -1,0 +1,102 @@
+/*--> GLobal <--*/
+html {
+  font-size: 32px;
+}
+
+/*--> HEADER <--*/
+header {
+  position: fixed;
+  width: 100%;
+}
+
+.banner {
+  height: 2rem;
+  padding: 0rem .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: .75rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo span:first-child{
+  color: #000;
+}
+
+.logo span:last-child{
+  color: #ccc;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+}
+.navlarge {
+  display: flex;
+  align-items: center;
+}
+
+.navlarge span{
+    padding-right: .5rem;
+    font-size: .5rem;
+}
+
+.navlarge span:lastchild{
+    padding-right: 0rem;
+}
+
+.navmobile{
+  display: none;
+}
+
+@media only screen and (max-width: 780px){
+  .banner{
+    padding: 0px;
+  }
+  
+  .logo{
+    width: 25%;
+    justify-content: center;
+  }
+
+  .logo span{
+    display: none;
+  }
+
+  nav {
+    width: 75%;
+  }
+  .navlarge{
+    display: none;
+  }
+
+  .navmobile{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/*--> MAIN <--*/
+main {
+  padding-top: 2rem;
+}
+
+.gray{
+  background-color: #ccc;
+}
+
+.white{
+  background-color: #fff;
+}
+
+.section {
+
+}
+/*--> Footer <--*/
