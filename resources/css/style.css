@@ -1,6 +1,32 @@
 /*--> GLobal <--*/
 html {
   font-size: 32px;
+  background-color: #fff;
+}
+
+h1{
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h2{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+h3{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+h4{
+  font-size: .75rem;
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
 }
 
 /*--> HEADER <--*/
@@ -9,7 +35,7 @@ header {
   width: 100%;
 }
 
-.banner {
+.navbar {
   height: 2rem;
   padding: 0rem .75rem;
   display: flex;
@@ -56,10 +82,10 @@ nav a {
 }
 
 @media only screen and (max-width: 780px){
-  .banner{
+  .navbar{
     padding: 0px;
   }
-  
+
   .logo{
     width: 25%;
     justify-content: center;
@@ -92,11 +118,53 @@ main {
   background-color: #ccc;
 }
 
-.white{
-  background-color: #fff;
-}
-
 .section {
+  min-height: 400px;
+}
+
+/*--> Banner <--*/
+.banner{
+  display: flex;
+}
+
+.banner .primary{
+  width: 60%;
+  max-height: 12rem;
+  margin: 1rem .75rem;
+  display: flex;
+  background-image: url(../images/banner.jpg);
+  background-position: right top;
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
+
+.banner .secondary{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.banner .secondary h2,
+.banner .secondary span{
+  margin-bottom: .75rem;
+}
+
+.banner .secondary a {
+  width: 100%;
+  display: flex;
+
+}
+
+.banner .secondary div {
+  width: 80%;
+}
+
+/*--> Information <--*/
+
+/*--> Start learning <--*/
+
+/*--> Thesis <--*/
+
 /*--> Footer <--*/
