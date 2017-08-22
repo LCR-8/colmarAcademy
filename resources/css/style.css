@@ -57,7 +57,7 @@ header {
   font-size: .75rem;
   font-weight: bold;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .logo span:first-child{
@@ -141,7 +141,8 @@ main {
 }
 
 /*--> Banner <--*/
-.banner{
+.banner,
+.thesiscontent{
   display: flex;
   min-height: 13rem;
 }
@@ -224,39 +225,43 @@ main {
   font-size: .5rem;
 }
 
-.information .secondary{
+.information .secondary,
+.thesiscontent .secondary{
   width: 40%;
   margin: 1rem 0rem;
-  display: flex;
+/*  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-left: 1px solid lightgray;
+*/  border-left: 1px solid #ccc;
 }
 
 .subtopic {
   display: flex;
   align-items: center;
-  padding-top: .5rem;
-  height: 7rem;
+
+/*  height: 7rem;
+*/
 }
 
-.subtopic:first-child{
-  padding-top: 0rem;
-  border-bottom: 4px solid lightgray;
+.information .subtopic:first-child{
+  margin-top: 0rem;
+/*  border-bottom: 4px solid #ccc;
+*/
 }
 
 .subtopic .imgdiv{
   width: 35%;
   height: auto;
   min-height: 6rem;
-  margin: 0rem .5rem .5rem .5rem;
+  margin: .5rem;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.orient{
+.subtopic .imgdiv.orient{
   background-image: url(../images/information-orientation.jpg);
+  margin-top: 0rem;
 }
 
 .campus{
@@ -369,6 +374,7 @@ main {
   .start{
     background-color: #fff;
     padding: 0rem;
+    margin-bottom: 1rem;
   }
 
   .courses{
@@ -399,7 +405,95 @@ main {
     text-align: left;
     margin-top: 0rem;
   }
+
+  .courses .course:last-child{
+    margin-bottom: 1rem;
+  }
 }
 /*--> Thesis <--*/
+/* thesis primary and secondary are dealt with in conjunction with the .banner styles */
+.thesis{
+  align-items: flex-start;
+}
 
+.thesis h2{
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.thesis .primary{
+  flex-direction: column;
+  align-items: left;
+  max-height: 21rem;
+}
+
+.thesis video{
+  height: auto;
+  width: 100%;
+  margin-bottom: .75rem;
+}
+
+.thesis h3{
+  margin-bottom: .25rem;
+}
+
+.thesis .secondary{
+    border: 0rem;
+}
+
+.thesis .secondary img{
+  width: 100%;
+}
+
+.fisma{
+  background-image: url(../images/thesis-fisma.jpg);
+}
+
+.nowandthen{
+  background-image: url(../images/thesis-now-and-then.jpg);
+  background-position: right bottom;
+}
+
+@media only screen and (max-width: 780px){
+  .thesiscontent .primary{
+    width: 100%;
+    margin: .5rem 0rem 0rem 0rem;
+  }
+
+  .thesiscontent .primary h3,
+  .thesiscontent .primary p,
+  .thesiscontent .secondary{
+    display: none;
+  }
+
+}
 /*--> Footer <--*/
+footer{
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem .75rem;
+  border: .5px #ccc solid;
+  height: 2rem;
+}
+
+footer span,
+footer a{
+  font-size: .5rem;
+}
+
+.footlink{
+  display: flex;
+}
+
+.footlink a:first-child{
+  margin-right: .5rem;
+}
+
+@media only screen and (max-width: 780px){
+  footer{
+    justify-content: center;
+  }
+  .footlink{
+    display: none;
+  }
+}
