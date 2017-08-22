@@ -127,11 +127,7 @@ main {
 .gray{
   background-color: #ccc;
 }
-/*
-.section {
-  min-height: 400px;
-}
-*/
+
 .primary{
   width: 60%;
   max-height: 12rem;
@@ -229,18 +225,12 @@ main {
 .thesiscontent .secondary{
   width: 40%;
   margin: 1rem 0rem;
-/*  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-*/  border-left: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
 
 .subtopic {
   display: flex;
   align-items: center;
-
-/*  height: 7rem;
-*/
 }
 
 .information .subtopic:first-child{
@@ -411,7 +401,7 @@ main {
   }
 }
 /*--> Thesis <--*/
-/* thesis primary and secondary are dealt with in conjunction with the .banner styles */
+/* thesis primary and secondary are dealt with in conjunction with the .banner and .information styles */
 .thesis{
   align-items: flex-start;
 }
