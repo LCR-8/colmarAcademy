@@ -2,6 +2,7 @@
 html {
   font-size: 32px;
   background-color: #fff;
+  font-family: oswald, sans-serif;
 }
 
 h1{
@@ -126,11 +127,11 @@ main {
 .gray{
   background-color: #ccc;
 }
-
+/*
 .section {
   min-height: 400px;
 }
-
+*/
 .primary{
   width: 60%;
   max-height: 12rem;
@@ -142,6 +143,7 @@ main {
 /*--> Banner <--*/
 .banner{
   display: flex;
+  min-height: 13rem;
 }
 
 .banner .primary{
@@ -228,40 +230,63 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-left: 1px solid lightgray;
 }
 
 .subtopic {
   display: flex;
   align-items: center;
   padding-top: .5rem;
+  height: 7rem;
 }
 
 .subtopic:first-child{
   padding-top: 0rem;
+  border-bottom: 4px solid lightgray;
 }
 
-.subtopic img{
+.subtopic .imgdiv{
   width: 35%;
   height: auto;
+  min-height: 6rem;
   margin: 0rem .5rem .5rem .5rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.orient{
+  background-image: url(../images/information-orientation.jpg);
+}
+
+.campus{
+  background-image: url(../images/information-campus.jpg);
+  background-position: right bottom;
+}
+
+.guest{
+  background-image: url(../images/information-guest-lecture.jpg);
 }
 
 .subtopic .details{
   width: 65%;
+}
+
+.details{
   display: flex;
   flex-direction: column;
 }
 
-.subtopic .details h4,
-.subtopic .details span {
+.details h4,
+.details span {
   margin-bottom: .25rem;
 }
 
-.subtopic .details span{
+.details span{
   font-size: .5rem;
 }
 
-.subtopic .details a {
+.details a {
   color: #0270fd;
   font-size: .6rem
 }
@@ -277,10 +302,104 @@ main {
 
   .information .subtopic{
     flex-direction: column;
+    height: auto;
+    margin: .5rem;
+    background-color: white;
+    border: 0px solid;
+  }
+
+  .subtopic .imgdiv{
+    width: 100%;
+  }
+
+  .orient{
+    background-image: url(../images/information-orientation-mobile.jpg);
+  }
+
+  .campus{
+    background-image: url(../images/information-campus-mobile.jpg);
+    background-position: right bottom;
+  }
+
+  .guest{
+    background-image: url(../images/information-guest-lecture-mobile.jpg);
+  }
+
+  .subtopic .details {
+    width: 100%;
+    margin-left: .5rem;
   }
 }
 /*--> Start learning <--*/
+.start{
+  padding: 1rem 2.25rem 0rem 2.25rem;
+}
 
+.start h2{
+  text-align: center;
+}
+
+.courses{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.course {
+  width: 28%;
+  min-height: 8rem;
+  margin: 0rem 0rem 1rem 1rem;
+  background-color: #fff;
+}
+
+.course img{
+  width: 100%;
+  height: auto;
+}
+
+.course .details{
+  padding: 0rem .5rem .75rem .5rem;
+}
+
+.course .details h4{
+  margin-top: .5rem;
+}
+
+@media only screen and (max-width: 780px){
+  .start{
+    background-color: #fff;
+    padding: 0rem;
+  }
+
+  .courses{
+    margin-top: .5rem;
+    justify-content: center;
+  }
+
+  .course img,
+  .course span{
+    display: none;
+  }
+
+  .course{
+    width: 90%;
+    background-color: #fff;
+    text-align: center;
+    min-height: 1rem;
+    margin: 0rem .25rem 0rem .25rem;
+  }
+
+  .course .details {
+    padding: 0rem;
+  }
+
+  .course .details h4{
+    background-color: #ccc;
+    padding: .5rem 0rem .75rem .5rem;
+    text-align: left;
+    margin-top: 0rem;
+  }
+}
 /*--> Thesis <--*/
 
 /*--> Footer <--*/
